@@ -1,0 +1,162 @@
+==========HTML==========
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js" integrity="sha512-ELgdXEUQM5x+vB2mycmnSCsiDZWQYXKwlzh9+p+Hff4f5LA+uf0w2pOp3j7UAuSAajxfEzmYZNOOLQuiotrt9Q==" crossorigin="anonymous"></script>
+ 
+<div class="center">
+  <div class="list-group" id="player-list">
+    <div class="list-group-item">
+      <div class="handle flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="thumbnail flex-center">
+        <img src="https://picsum.photos/id/1004/100" alt="">
+      </div>
+      <div class="details">
+        <h2>Perfect</h2>
+        <p>Ed Sheeran</p>
+      </div>
+      <div class="btn flex-center">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="handle flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="thumbnail flex-center">
+        <img src="https://picsum.photos/id/1005/100" alt="">
+      </div>
+      <div class="details">
+        <h2>Alone</h2>
+        <p>Alan Walker</p>
+      </div>
+      <div class="btn flex-center">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="handle flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="thumbnail flex-center">
+        <img src="https://picsum.photos/id/1008/100" alt="">
+      </div>
+      <div class="details">
+        <h2>Not Afraid</h2>
+        <p>Eminem</p>
+      </div>
+      <div class="btn flex-center">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="handle flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="thumbnail flex-center">
+        <img src="https://picsum.photos/id/1009/100" alt="">
+      </div>
+      <div class="details">
+        <h2>Hello</h2>
+        <p>Adele</p>
+      </div>
+      <div class="btn flex-center">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="handle flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="thumbnail flex-center">
+        <img src="https://picsum.photos/id/1042/100" alt="">
+      </div>
+      <div class="details">
+        <h2>In the end</h2>
+        <p>Linkin Park</p>
+      </div>
+      <div class="btn flex-center">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+  </div>
+</div>
+==========CSS==========
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+* {
+  margin:0px;
+  padding:0px;
+}
+body {
+  background:#ddd;
+  font-family:"Raleway";
+}
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.flex-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.list-group {
+  width:450px;
+  background:#f5f5f5;
+}
+.list-group .list-group-item {
+  display:flex;
+  border-bottom:1px solid #ccc;
+}
+.list-group .list-group-item > div {
+  padding:15px 0px;
+}
+.list-group .list-group-item .handle {
+  width:50px;
+  background:#eee;
+  border:1px solid #ddd;
+  cursor:pointer;
+}
+.list-group .list-group-item .handle i.fa {
+  color:#555;
+} 
+.list-group .list-group-item .handle:hover i.fa {
+  color:#111;
+}
+.list-group .list-group-item .thumbnail {
+  padding:0px 10px;
+}
+.list-group .list-group-item .thumbnail img {
+  width:50px;
+  border-radius:50%;
+}
+.list-group .list-group-item .details {
+  flex:1;
+}
+.list-group .list-group-item .details h2 {
+  font-size:16px;
+  color:#111;
+  padding:0px 5px 3px;
+}
+.list-group .list-group-item .details p {
+  color:#555;
+  font-size:14px;
+  padding:0px 7px;
+}
+.list-group .list-group-item .btn {
+  width:50px;
+}
+.list-group .list-group-item .btn i.fa {
+  color:#aaa;
+}
+.list-group .list-group-item .btn:hover i.fa {
+  color:#00acee;
+}
+==========JavaScript==========
+let player = document.getElementById("player-list");
+new Sortable(player,{
+  handle:'.handle',
+  animation:200
+});

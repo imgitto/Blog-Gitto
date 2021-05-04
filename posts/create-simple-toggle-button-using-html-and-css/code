@@ -1,0 +1,56 @@
+==========HTML==========
+<div class="toggle-btns">
+  <div class="toggle-btn">
+    <input type="checkbox" id="toggle-btn-1">
+    <label for="toggle-btn-1"></label>
+  </div>
+  <div class="toggle-btn red">
+    <input type="checkbox" id="toggle-btn-2">
+    <label for="toggle-btn-2"></label>
+  </div>
+</div>
+==========CSS==========
+div.toggle-btns {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+div.toggle-btn {
+  margin:20px;
+}
+.toggle-btn label {
+  positon:relative;
+  display:block;
+  width:100px;
+  height:50px;
+  background:#aaa;
+  border-radius:30px;
+  transition:all 300ms linear;
+}
+ 
+.toggle-btn label:before {
+  position:relative;
+  content:"";
+  width:40px;
+  height:40px;
+  background:#ddd;
+  display:block;
+  border-radius:50%;
+  top:5px;
+  left:10px;
+  transition:all 300ms linear;
+}
+.toggle-btn.red input:checked + label {
+  background:orangered;
+}
+.toggle-btn input:checked + label {
+  background:#00acee;
+}
+.toggle-btn input:checked + label:before {
+  left:50px;
+}
+ 
+.toggle-btn input {
+  display:none;
+}
