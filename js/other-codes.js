@@ -14,7 +14,7 @@
 
 		console.log(posts, posts.length);
 
-		let olderPostHTML = posts.reverse().splice(0,posts.length).map(function(post){
+		let olderPostHTML = posts.reverse().splice(0,2).map(function(post){
 			return `
 				<a class="post" href="../../posts/${post.dir}">
 			        <div class="thumbnail">
