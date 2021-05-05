@@ -1,0 +1,114 @@
+==========HTML==========
+<div class="tabs">
+  <div class="tab-header">
+    <div class="active">Code</div>
+    <div>About</div>
+    <div>Services</div>
+    <div>Contact</div>
+  </div>
+  <div class="tab-content">
+    <div class="active">
+      <h2>This is code section</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus alias, distinctio aliquid dolorem quidem voluptatem magni iusto commodi fuga modi nisi incidunt! Earum alias quo harum ea rerum provident.</p>
+      <p>Necessitatibus at nostrum tempora eligendi ad, harum quidem commodi. Eum beatae, dignissimos aperiam molestiae minima explicabo, neque officia, nihil atque et ipsam sed totam laborum! Atque, velit adipisci. Nulla, voluptates.</p>
+    </div>
+    <div>
+      <h2>This is about section</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus alias, distinctio aliquid dolorem quidem voluptatem magni iusto commodi fuga modi nisi incidunt! Earum alias quo harum ea rerum provident.</p>
+      <p>Necessitatibus at nostrum tempora eligendi ad, harum quidem commodi. Eum beatae, dignissimos aperiam molestiae minima explicabo, neque officia, nihil atque et ipsam sed totam laborum! Atque, velit adipisci. Nulla, voluptates.</p>
+    </div>
+    <div>
+      <h2>This is services section</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus alias, distinctio aliquid dolorem quidem voluptatem magni iusto commodi fuga modi nisi incidunt! Earum alias quo harum ea rerum provident.</p>
+      <p>Necessitatibus at nostrum tempora eligendi ad, harum quidem commodi. Eum beatae, dignissimos aperiam molestiae minima explicabo, neque officia, nihil atque et ipsam sed totam laborum! Atque, velit adipisci. Nulla, voluptates.</p>
+    </div>
+    <div>
+      <h2>This is contact section</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus alias, distinctio aliquid dolorem quidem voluptatem magni iusto commodi fuga modi nisi incidunt! Earum alias quo harum ea rerum provident.</p>
+      <p>Necessitatibus at nostrum tempora eligendi ad, harum quidem commodi. Eum beatae, dignissimos aperiam molestiae minima explicabo, neque officia, nihil atque et ipsam sed totam laborum! Atque, velit adipisci. Nulla, voluptates.</p>
+    </div>
+  </div>
+</div>
+==========CSS==========
+* {
+  box-sizing:border-box;
+}
+body {
+  background:#00acee;
+  font-family:"Raleway";
+}
+.tabs {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;
+  height:350px;
+}
+.tabs .tab-header {
+  display:flex;
+  height:80px;
+}
+.tabs .tab-header > div {
+  position:relative;
+  width:calc(100% / 4);
+  height:100%;
+  text-align:center;
+  line-height:80px;
+  font-weight:600;
+  color:#f5f5f5;
+  cursor:pointer;
+  z-index:2;
+}
+.tabs .tab-header > div:before {
+  content:"";
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:0%;
+  background:#f5f5f5;
+  z-index:-1;
+}
+.tabs .tab-header > div:hover:before {
+  transition:all 300ms ease-in-out;
+  height:5%;
+}
+.tabs .tab-header > div.active {
+  color:#00acee;
+}
+.tabs .tab-header > div.active:before {
+  transition:all 300ms ease-in-out;
+  height:100%;
+}
+.tabs .tab-content {
+  position:relative;
+  background:#f5f5f5;
+  height:calc(100% - 80px);
+  overflow:hidden;
+}
+.tabs .tab-content > div {
+  position:absolute;
+  transform:scale(0.5);
+  opaicty:0;
+  top:200%;
+  padding:20px;
+  transition:all 500ms ease-in-out;
+}
+.tabs .tab-content > div.active {
+  transform:scale(1);
+  opacity:1;
+  top:0%;
+}
+==========JavaScript==========
+let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
+
+for(let i=0;i<tabPanes.length;i++){
+  tabPanes[i].addEventListener("click",function(){
+    document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+    tabPanes[i].classList.add("active");
+    
+    document.getElementsByClassName("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+    document.getElementsByClassName("tab-content")[0].getElementsByTagName("div")[i].classList.add("active");
+  })
+}
