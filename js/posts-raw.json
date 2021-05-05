@@ -124,5 +124,15 @@
 		dir:"before-after-image-slider-using-html-css-and-javascript",
 		title:"Before & After Image Slider",
 		tags:["html","css","javascript"]
+	},
+	{
+		dir:"create-animated-tabs-layout-using-html-css-and-javascript",
+		title:"Create Animated Tabs Layout",
+		tags:["html","css","javascript"]
+	},
+	{
+		dir:"custom-contextmenu-using-html-css-and-javascript",
+		title:"Custom Context Menu",
+		tags:["html","css","javascript"]
 	}		
 ]
