@@ -175,6 +175,30 @@ a {
   margin:20px 0px;
 }
 
+.loader {
+  margin:20px 0px;
+  display: block;
+  position: relative;
+}
+.loader:before {
+  content:"";
+  position: absolute;
+  top:0px;
+  left:50%;
+  transform:translateX(-50%) rotate(0deg);
+  width:50px;
+  height:50px;
+  border:5px solid #111;
+  border-left:5px solid transparent;
+  border-radius:50%;
+  animation:loading 500ms ease-in-out infinite;
+}
+@keyframes loading {
+  to {
+    transform:translateX(-50%) rotate(360deg);
+  }
+}
+
 @media (max-width:1000px){
   .flex-width {
     width:100%;
