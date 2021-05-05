@@ -1,5 +1,9 @@
 (function(){
-
+	
+	document.querySelector(".grid .code").innerHTML = `
+		<div class="loader"></div>
+	`;
+	
 	fetch("code").then(function(response){
 		return response.text();
 	}).then(function(codetext){
@@ -36,7 +40,10 @@
 			PR.prettyPrint();
 		},100);
 	}).catch(function(error){
-
+		document.querySelector(".grid .code").innerHTML = `
+			<p>Something went wrong. Please try again.<p>
+			<button onclick="window.location.href = window.location.href">Reload Page</buton>
+		`;
 	});
 
 	function safeHTML(code){
