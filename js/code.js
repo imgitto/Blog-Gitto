@@ -55,7 +55,7 @@
 		let fiverr_ad = document.createElement("div");
 		fiverr_ad.classList.add("ad");
 		fiverr_ad.innerHTML = fiverr_html;
-		document.querySelector(".grid .other").appendChild(fiverr_ad);
+		document.querySelector(".grid .other").insertBefore(fiverr_ad, document.querySelector(".grid .other .ad"));
 	})();
 	
 })();
