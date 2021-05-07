@@ -134,5 +134,10 @@
 		dir:"custom-contextmenu-using-html-css-and-javascript",
 		title:"Custom Context Menu",
 		tags:["html","css","javascript"]
+	},
+	{
+		dir:"random-password-generator-app-using-html-css-and-javascript",
+		title:"Random Password Generator App",
+		tags:["html","css","javascript"]
 	}		
 ]
