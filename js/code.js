@@ -54,7 +54,7 @@
 		if(innerWidth < 1050){
 			return;	
 		}
-		let fiverr_html = `<a href="https://track.fiverr.com/visit/?bta=237048&nci=7020" Target="_Top"><img border="0" src="https://fiverr.ck-cdn.com/tn/serve/?cid=11971893"  width="300" height="300"></a>`;
+		let fiverr_html = `<a href="https://track.fiverr.com/visit/?bta=237048&nci=7020" Target="_Top"><img border="0" src="https://fiverr.ck-cdn.com/tn/serve/?cid=11973820"  width="300" height="300"></a>`;
 		let fiverr_ad = document.createElement("div");
 		fiverr_ad.classList.add("ad");
 		fiverr_ad.innerHTML = fiverr_html;
