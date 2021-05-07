@@ -139,5 +139,10 @@
 		dir:"random-password-generator-app-using-html-css-and-javascript",
 		title:"Random Password Generator App",
 		tags:["html","css","javascript"]
-	}		
+	},
+	{
+		dir:"poll-ui-using-html-css-and-javascript",
+		title:"Poll UI",
+		tags:["html","css","javascript"]
+	}
 ]
