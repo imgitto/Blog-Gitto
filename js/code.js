@@ -51,7 +51,10 @@
 	}
 	
 	;(function(){
-		let fiverr_html = `<iframe src="https://tools.fiverr.com/?searchbox-iframe=1&amp;affid=237048&amp;widget-width=300&amp;widget-style=2&amp;widget-commission=fiverrhybrid" border="0" scrolling="no" height="281px" width="100%" style="border: 0px; overflow: hidden; width: 559px; height: 281px; box-shadow: rgba(17, 17, 17, 0.12) 0px 16px 32px; max-width: 300px;" class="fasb-iframe-searchbox-widget"  data-origwidth="100%" data-origheight="253px" max-width="300" widget-width="300" widget-style="2"></iframe>`;
+		if(innerWidth < 1050){
+			return;	
+		}
+		let fiverr_html = `<a href="https://track.fiverr.com/visit/?bta=237048&nci=7020" Target="_Top"><img border="0" src="https://fiverr.ck-cdn.com/tn/serve/?cid=11971893"  width="300" height="300"></a>`;
 		let fiverr_ad = document.createElement("div");
 		fiverr_ad.classList.add("ad");
 		fiverr_ad.innerHTML = fiverr_html;
