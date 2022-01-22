@@ -9,12 +9,16 @@
 		      <a href="blog.html">Blog</a> 
 		      <a class="gap" href="#"></a>
 		      -->
+		      <!--
 		      <a href="https://instagram.com/codingflag">
 		        <i class="fa fa-instagram"></i>
 		      </a>
+		      -->
+		      <!--
 		      <a href="https://www.youtube.com/channel/UC7Jv_Etk003ggbXi-r1Ah2A">
 		        <i class="fa fa-youtube-play"></i>
 		      </a>
+		      -->
 		      <a href="https://codepen.io/dsr">
 		        <i class="fa fa-codepen"></i>
 		      </a>
